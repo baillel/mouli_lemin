@@ -112,4 +112,16 @@ else
     echo "Test No pipe : KO"
 fi
 
-echo "total : $total / 9"
+./../lem_in < maps/comment_after_command > /dev/null 2> /dev/null
+if [ $? -eq 0 ]
+then
+    let "total += 1"
+    echo "Test Comment after command : OK"
+elif [ $? -eq 139 ]
+then
+    echo "Test Comment after command : Segfault"
+else
+    echo "Test Comment after command : KO"
+fi
+
+echo "total : $total / 10"
