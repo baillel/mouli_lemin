@@ -1,4 +1,4 @@
-#!/bin/sh
+# !/bin/sh
 
 total=0
 ./../lem_in < maps/neg_ant > /dev/null 2> /dev/null
