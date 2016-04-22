@@ -9,7 +9,7 @@ if [ $test1 -eq 1 -a $test2 -eq 1 ]
 then
     let "total += 1"
     echo "Test bad ants number : OK"
-elif [ $test1 -eq 139 -o $test2 == 139 ]
+elif [ $test1 -eq 139 -o $test2 -eq 139 ]
 then
     echo "Test bad ants number : Segfault"
 else
